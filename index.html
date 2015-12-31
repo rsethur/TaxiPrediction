@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="NYC Taxi Data Prediction : ">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>NYC Taxi Data Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>NYC Taxi Data Prediction by rsethur</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/sdaulton/TaxiPrediction">View on GitHub</a>
-
-          <h1 id="project_title">NYC Taxi Data Prediction</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/sdaulton/TaxiPrediction/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/sdaulton/TaxiPrediction/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header>
+          <h1>NYC Taxi Data Prediction</h1>
+          <h2></h2>
         </header>
-    </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p><img src="https://github.com/sdaulton/TaxiPrediction/raw/master/figures/2013-24hours.gif" alt="image"></p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/rsethur/TaxiPrediction/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/rsethur/TaxiPrediction/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/rsethur/TaxiPrediction" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p><img src="https://github.com/rsethur/TaxiPrediction/raw/master/figures/2013-24hours.gif" alt="image"></p>
 
 <h1>
 <a id="the-yellow-taxicab-an-nyc-icon" class="anchor" href="#the-yellow-taxicab-an-nyc-icon" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Yellow Taxicab: an NYC Icon</h1>
@@ -81,7 +81,7 @@
 <li>
 <a href="http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml">Raw NYC Taxi Trip Data</a> </li>
 <li>
-<a href="https://raw.githubusercontent.com/sdaulton/TaxiPrediction/master/data/nyc-weather-data.csv">NYC Weather Data</a> from <a href="http://www.ncdc.noaa.gov/cdo-web/datasets">NOAA</a>
+<a href="https://raw.githubusercontent.com/rsethur/TaxiPrediction/master/data/nyc-weather-data.csv">NYC Weather Data</a> from <a href="http://www.ncdc.noaa.gov/cdo-web/datasets">NOAA</a>
 </li>
 </ul>
 
@@ -95,13 +95,13 @@
 <p><strong>Number of Pickups in 2013 and 2014</strong></p>
 
 <p>Throughout the days of the year (horizontal axis) and the hours of the day (vertical axis)
-<img src="https://github.com/sdaulton/TaxiPrediction/raw/master/figures/pickups-time-heatmap-no-title.jpg" alt="image"></p>
+<img src="https://github.com/rsethur/TaxiPrediction/raw/master/figures/pickups-time-heatmap-no-title.jpg" alt="image"></p>
 
 <h3>
 <a id="3-data-preparation-with-apache-spark" class="anchor" href="#3-data-preparation-with-apache-spark" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Data preparation with Apache Spark</h3>
 
 <h5>
-<a id="amazon-web-services-aws-cluster-notebook" class="anchor" href="#amazon-web-services-aws-cluster-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Amazon Web Services (AWS) Cluster: (<a href="https://github.com/sdaulton/TaxiPrediction/blob/master/1.%20Setup%20Project.ipynb">notebook</a>)</h5>
+<a id="amazon-web-services-aws-cluster-notebook" class="anchor" href="#amazon-web-services-aws-cluster-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Amazon Web Services (AWS) Cluster: (<a href="https://github.com/rsethur/TaxiPrediction/blob/master/1.%20Setup%20Project.ipynb">notebook</a>)</h5>
 
 <ul>
 <li>We used AWS to setup a 5-node Spark cluster (each machine had 8 cores, 16 GB RAM), and configured the cluster setup to leverage maximum resources by Spark.</li>
@@ -109,7 +109,7 @@
 </ul>
 
 <h5>
-<a id="data-cleansing-notebook" class="anchor" href="#data-cleansing-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data cleansing: (<a href="https://github.com/sdaulton/TaxiPrediction/blob/master/2.%20DataPrepAWSSpark.ipynb">notebook</a>)</h5>
+<a id="data-cleansing-notebook" class="anchor" href="#data-cleansing-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data cleansing: (<a href="https://github.com/rsethur/TaxiPrediction/blob/master/2.%20DataPrepAWSSpark.ipynb">notebook</a>)</h5>
 
 <ul>
 <li>We had to parse 440 million records and remove dirty records (e.g. nulls, invalid geographical coordinates, etc.)</li>
@@ -133,8 +133,8 @@
 <li>We used two models:
 
 <ul>
-<li>Random Forest regression: (<a href="https://github.com/sdaulton/TaxiPrediction/blob/master/4a.%20Random%20Forest%20(average%20days).ipynb">notebook</a>)</li>
-<li>k-Nearest Neighbors regression: (<a href="https://github.com/sdaulton/TaxiPrediction/blob/master/4c.%20k-Nearest%20Neighbors%20(average%20days).ipynb">notebook</a>)</li>
+<li>Random Forest regression: (<a href="https://github.com/rsethur/TaxiPrediction/blob/master/4a.%20Random%20Forest%20(average%20days).ipynb">notebook</a>)</li>
+<li>k-Nearest Neighbors regression: (<a href="https://github.com/rsethur/TaxiPrediction/blob/master/4c.%20k-Nearest%20Neighbors%20(average%20days).ipynb">notebook</a>)</li>
 </ul>
 </li>
 <li>The main features we used were
@@ -156,7 +156,7 @@
 </ul>
 
 <p><strong>Predicted Density Distribution vs. Actual Density Distribution on a Monday</strong>
-<img src="https://raw.githubusercontent.com/sdaulton/TaxiPrediction/master/figures/monday-24hours.gif" alt="image"></p>
+<img src="https://raw.githubusercontent.com/rsethur/TaxiPrediction/master/figures/monday-24hours.gif" alt="image"></p>
 
 <p>The above image shows the predicted number of pickups on a given Monday using a random forest regressor on the the left and the actual number of pickups on the right.  The sheet number at the top of each image corresponds to the hour of the day.</p>
 
@@ -166,17 +166,17 @@
 <ul>
 <li>To make predictions about the future, we separated pre-2015 records from 2015 records, while keeping the data of each specific day of the year separate</li>
 <li>Combined NYC taxi trip data with features extracted from NYC weather data</li>
-<li>We trained a Random Forest regressor using pre-2015 data and tested regressor by on the 2015 data (<a href="https://github.com/sdaulton/TaxiPrediction/blob/master/4b.%20Random%20Forest%20(specific%20days).ipynb">notebook</a>)</li>
+<li>We trained a Random Forest regressor using pre-2015 data and tested regressor by on the 2015 data (<a href="https://github.com/rsethur/TaxiPrediction/blob/master/4b.%20Random%20Forest%20(specific%20days).ipynb">notebook</a>)</li>
 <li> A taxi company could use this type of prediction on a daily basis to tune their policies based on weather or other factors to maximize coverage on a specific day.</li>
 </ul>
 
 <p>Underneath you find the importance of each of the features in the random forest. Clearly location is most important, followed by time of the day.</p>
 
-<p><img src="https://raw.githubusercontent.com/sdaulton/TaxiPrediction/master/figures/feature-importance.png" alt="Image">]</p>
+<p><img src="https://raw.githubusercontent.com/rsethur/TaxiPrediction/master/figures/feature-importance.png" alt="Image">]</p>
 
 <p>Below you find the predicted and actual pick up density for May 1st, 2015.</p>
 
-<p><img src="https://github.com/sdaulton/TaxiPrediction/raw/master/figures/pickup-density-may-1.gif" alt="image"></p>
+<p><img src="https://github.com/rsethur/TaxiPrediction/raw/master/figures/pickup-density-may-1.gif" alt="image"></p>
 
 <p>Note: the noise in the data became more apparent when we used this fine temporal granularity, and the prediction accuracy decreased.  We believe this results from the regressor thinking that that no data for a particular location and time means the number of pickups is unknown.  Of course in reality, no records for a particular location and time means zero pickups at that location and time, because we assume that all taxi trips are recorded.  We hypothesize that this shortcoming in our data preparation leads to the widespread overprediction in areas outside Manhattan.</p>
 
@@ -184,15 +184,15 @@
 <a id="approach-3-predicting-the-dropoff-location-latlong-based-on-the-pickup-location--time-day-of-week" class="anchor" href="#approach-3-predicting-the-dropoff-location-latlong-based-on-the-pickup-location--time-day-of-week" aria-hidden="true"><span class="octicon octicon-link"></span></a>Approach 3: Predicting the dropoff location (lat/long) based on the pickup location &amp; time, day of week</h5>
 
 <ul>
-<li>Here we aggregated the dataset by pickup location, dropoff location, day of week &amp; time slot: <a href="https://github.com/sdaulton/TaxiPrediction/blob/master/5a.%20Destinations%20-%20DataPrepAWSSpark.ipynb">notebook</a>
+<li>Here we aggregated the dataset by pickup location, dropoff location, day of week &amp; time slot: <a href="https://github.com/rsethur/TaxiPrediction/blob/master/5a.%20Destinations%20-%20DataPrepAWSSpark.ipynb">notebook</a>
 </li>
-<li>We trained a random forest model on this for multi output regression: predicting two variables (dropoff lat/long): <a href="https://github.com/sdaulton/TaxiPrediction/blob/master/5b.%20Destinations%20-%20Random%20Forest.ipynb">notebook</a>. So the idea was that given that somebody hails a cab at location X, we would want to predict where that customer wants to be dropped of.</li>
+<li>We trained a random forest model on this for multi output regression: predicting two variables (dropoff lat/long): <a href="https://github.com/rsethur/TaxiPrediction/blob/master/5b.%20Destinations%20-%20Random%20Forest.ipynb">notebook</a>. So the idea was that given that somebody hails a cab at location X, we would want to predict where that customer wants to be dropped of.</li>
 <li>The best RMSE value that we got was 0.120. In NYC each longitude is approx 53 miles &amp; latitude is approx 69 miles (see notebook for reference). This gives an error range of 6 x 8 square miles. So we do not have a great predictor here (but a great learning experience in modeling this problem).</li>
 </ul>
 
 <p>You can play around in Tableau by clicking on the image below to explore the dropoff locations, given a pickup location.</p>
 
-<p><a href="https://public.tableau.com/profile/tijlk#!/vizhome/pickup-destination-coupling/Dashboard1"> <img src="https://raw.githubusercontent.com/sdaulton/TaxiPrediction/master/figures/dropoff-location.png" alt="Image"></a></p>
+<p><a href="https://public.tableau.com/profile/tijlk#!/vizhome/pickup-destination-coupling/Dashboard1"> <img src="https://raw.githubusercontent.com/rsethur/TaxiPrediction/master/figures/dropoff-location.png" alt="Image"></a></p>
 
 <h3>
 <a id="5-next-steps" class="anchor" href="#5-next-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Next Steps:</h3>
@@ -216,18 +216,15 @@
 <li>
 <a href="https://github.com/hkwi/python-geohash">Geohash.py</a>: A nice geohash library</li>
 </ol>
-      </section>
+        </section>
+
+        <footer>
+          NYC Taxi Data Prediction is maintained by <a href="https://github.com/rsethur">rsethur</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">NYC Taxi Data Prediction maintained by <a href="https://github.com/sdaulton">sdaulton</a></p>
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
   </body>
 </html>
